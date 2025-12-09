@@ -1,0 +1,10 @@
+.blue-text-gradient{
+    background: #070791;
+    background: linear-gradient(to bottom, #070791 0%, #09BAF0 59%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.icon-holder{
+    border: 1px solid #593a0b;
+    background: #322b08;
+}

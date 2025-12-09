@@ -1,0 +1,121 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 20px 5%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+/* Column 1 - Logo */
+.logo-col .logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Column 2 - Navigation */
+.nav-col {
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: inline-flex;
+    gap: 2.2rem;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.85;
+    transition: .2s ease;
+}
+
+.nav-links li a:hover {
+    opacity: 1;
+}
+
+/* Column 3 - Button */
+.btn-col {
+    text-align: right;
+}
+
+.header-btn {
+    background: #7a26ff;
+    padding: 10px 24px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header-btn:hover {
+    background: #6922d7;
+}
+
+/* Mobile Menu */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    position: absolute;
+    right: 25px;
+    top: 22px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    /* Show hamburger */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide nav + button on mobile until opened */
+    .nav-col,
+    .btn-col {
+        display: none;
+    }
+
+    /* When menu checkbox active -> show menu */
+    #menu-toggle:checked ~ .nav-col,
+    #menu-toggle:checked ~ .btn-col {
+        display: block;
+        grid-column: span 3;
+        margin-top: 15px;
+        text-align: center;
+        animation: fadeIn 0.3s ease;
+    }
+
+    /* Stack nav links vertically */
+    .nav-links {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 1rem;
+    }
+
+    /* Button centered */
+    .btn-col {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}

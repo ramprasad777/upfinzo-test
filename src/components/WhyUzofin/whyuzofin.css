@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.build-faster-section{
+    background: url(../../../public/StartBuilding_001_BG.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding:100px 0;
+}
+.animation-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .track {
+    display: inline-flex;
+    gap: 20px;
+    animation: marquee 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }

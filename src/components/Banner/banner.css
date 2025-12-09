@@ -1,0 +1,133 @@
+.hero {
+    height: 100vh;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-top:100px;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    /* background: radial-gradient(circle at top right, #512d8d, transparent 60%),
+                radial-gradient(circle at bottom left, #1ca7ae, transparent 60%); */
+    opacity: 0.5;
+}
+
+.ring {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    box-shadow: none!important;
+}
+
+.ring1 {
+    top: 0;
+    left: -250px;
+    background: url(../../../public/banner-bg/Frame-L.png) no-repeat left top;
+}
+
+.ring2 {
+    top: 0;
+    right: -250px;
+    background: url(../../../public/banner-bg/Frame-R.png) no-repeat left top;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.content {
+    position: relative;
+    max-width: 1200px;
+    z-index: 5;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    background: #3FA3FF;
+    background: linear-gradient(to right, #3FA3FF 36%, #9520CF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: .85;
+    margin-bottom: 2.5rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 35px;
+    text-decoration: none;
+    transition: .3s;
+    font-size: 1rem;
+}
+
+.primary {
+    background: #7a26ff;
+}
+
+.primary:hover {
+    background: #6922d7;
+}
+
+.secondary {
+    border: 2px solid #7a26ff;
+}
+
+.secondary:hover {
+    background: #7a26ff;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.1rem; }
+    .subtitle { font-size: 1rem; }
+    .buttons { flex-direction: column; }
+    .btn { width: 100%; }
+}
+
+.powered {
+    padding: 100px 6%;
+    text-align: center;
+}
+
+.powered h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    opacity: 0.85;
+}
+
+.logo-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.logo-box {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: 0.3s;
+}

@@ -1,0 +1,61 @@
+.primaryBtn{
+    background: #8C01FA;
+    background: linear-gradient(90deg, rgba(140, 1, 250, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    border-color: #8C01FA;
+}
+.secondaryBtn{
+    background: #080000;
+    background: linear-gradient(90deg, rgba(8, 0, 0, 1) 0%, rgba(48, 0, 86, 1) 100%);
+    border-color:#3e0865;
+}
+.btn{
+    display: inline-flex;
+    color:#fff;
+    border-width:1px;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+}
+.btn:hover{
+    border-color: #440178;
+}
+.btn .arrow{
+    position:relative;
+    width:20px;
+    height: 20px;
+    cursor:pointer;
+  /*   border:solid 1px white; */
+    transition:0.5s;
+    overflow:hidden;
+}
+.btn .arrow span{
+    position:absolute;
+    display:block;
+    content:"";
+    color:white;
+    width: 20px;
+    height: 20px;
+    top:0;
+    left:0;
+    transform-origin:0% 0%;
+}
+.btn:hover .arrow span{
+    animation: aniArrow01 .5s cubic-bezier(0, .5, 1, 0.4);
+}
+
+@keyframes aniArrow01 {
+    0% {
+      transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(20px);  
+    }
+    40%{
+        transform: translateX(40px);  
+    }
+    60%{
+        transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+}
