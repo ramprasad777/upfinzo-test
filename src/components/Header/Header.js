@@ -7,7 +7,7 @@ const Header = ()=>{
                 <div class="header-container">
                     <div class="header-col logo-col">
                         <div class="logo">
-                            <img src="/upfinzologo.png" className="" alt="logo" />
+                            <img src="/uzofin-logo.png" className="" alt="uzofin logo" />
                         </div>
                     </div>
                     <input type="checkbox" id="menu-toggle" />
