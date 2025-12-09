@@ -68,5 +68,5 @@ project-name/
 Clone the repository:
 
 ```bash
-git clone https://github.com/ramprasad777/upfinzo-test
-cd upfinzo-test
+git clone https://github.com/ramprasad777/upfinzo
+cd upfinzo
